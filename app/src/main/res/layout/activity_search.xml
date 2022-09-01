@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Search">
+
+    <LinearLayout
+        android:id="@+id/button_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/button3"
+            android:padding="10dp"
+            android:onClick="backButton"
+            android:layout_margin="10dp"
+            android:layout_width="100dp"
+            android:src="@drawable/ic_round_arrow_back_ios_new_24"
+            android:background="@drawable/custom_button"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/SearchLayout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_Layout"
+        app:layout_constraintTop_toBottomOf="@+id/button_Layout">
+
+        <EditText
+            android:id="@+id/Search_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:drawableLeft="@drawable/ic_round_search_24"
+            android:hint="Search" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/RadioGroupLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerViewSearch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SearchLayout">
+
+        <RadioGroup
+            android:id="@+id/radioGrouping"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:layout_margin="5dp"
+                android:id="@+id/MealRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Meals" />
+
+            <RadioButton
+                android:layout_margin="5dp"
+                android:id="@+id/DessertRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Desserts" />
+
+            <RadioButton
+                android:layout_margin="5dp"
+                android:id="@+id/DrinksRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Drinks" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewSearch"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/RadioGroupLayout"
+        app:layout_constraintVertical_bias="1.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>

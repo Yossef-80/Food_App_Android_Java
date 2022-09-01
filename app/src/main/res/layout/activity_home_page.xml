@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomePage"
+    android:orientation="vertical"
+    android:background="@color/home_Background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/menu_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/round_menu" />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:onClick="SearchPage"
+            android:src="@drawable/ic_round_search_24"
+          />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/discount_card">
+
+                <TextView
+                    android:id="@+id/awesome_Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_toStartOf="@+id/offer_image"
+                    android:lineSpacingExtra="50dp"
+                    android:text="Awesome"
+                    android:textColor="@color/black"
+                    android:textSize="30dp" />
+
+                <TextView
+                    android:id="@+id/Offers_on"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/awesome_Text"
+                    android:layout_alignStart="@+id/awesome_Text"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="0dp"
+
+                    android:layout_toStartOf="@+id/offer_image"
+                    android:lineSpacingExtra="50dp"
+                    android:text="Offers On"
+                    android:textColor="@color/black"
+                    android:textSize="30dp" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Offers_on"
+                    android:layout_alignStart="@+id/awesome_Text"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentBottom="true"
+
+                    android:layout_marginStart="11dp"
+                    android:layout_marginTop="30dp"
+
+                    android:layout_marginEnd="0dp"
+                    android:layout_toStartOf="@+id/offer_image"
+                    android:lineSpacingExtra="50dp"
+                    android:text="Fridays"
+                    android:textColor="@color/Orange"
+                    android:textSize="30dp" />
+
+                <ImageView
+                    android:id="@+id/offer_image"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/offers" />
+            </RelativeLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <GridLayout
+                    android:id="@+id/idGVcourses"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_gravity="center"
+                    android:columnCount="2"
+
+                    android:rowCount="2">
+
+                    <ImageView
+                        android:layout_width="160dp"
+                        android:layout_height="150dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/custom_cards2"
+                        android:layout_row="0"
+                        android:onClick="Meal_Page"
+                        android:layout_column="0"
+                        android:padding="20dp"
+                        android:src="@drawable/hamburger2" />
+
+                    <ImageView
+                        android:id="@+id/dessert_card"
+                        android:layout_width="160dp"
+                        android:layout_height="150dp"
+                        android:layout_margin="5dp"
+                        android:layout_row="0"
+                        android:layout_column="1"
+                        android:background="@drawable/custom_cards2"
+                        android:onClick="dessertpage"
+
+                        android:padding="20dp"
+                        android:src="@drawable/ice_cream2"/>
+
+                    <ImageView
+                        android:layout_width="160dp"
+                        android:layout_height="150dp"
+                        android:layout_margin="5dp"
+                        android:layout_row="1"
+                        android:onClick="Drink_Page"
+                        android:layout_column="0"
+                        android:background="@drawable/custom_cards2"
+                        android:padding="20dp"
+                        android:src="@drawable/iced_coffee2" />
+
+                </GridLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

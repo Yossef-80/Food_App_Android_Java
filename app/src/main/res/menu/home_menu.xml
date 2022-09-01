@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+    <item android:id="@+id/myAccount" android:icon="@drawable/ic_round_shopping_cart_24" android:title="My Account" app:showAsAction="collapseActionView">
+    </item><item android:id="@+id/myCart" android:icon="@drawable/ic_round_shopping_cart_24" android:title="My Cart" app:showAsAction="collapseActionView">
+    </item>
+    <item android:id="@+id/Contact_Us" android:icon="@drawable/ic_round_phone_24" android:title="Contact Us" app:showAsAction="collapseActionView">
+    </item>
+    <item android:id="@+id/Log_Out" android:icon="@drawable/ic_round_clear_24" android:title="Log Out" app:showAsAction="collapseActionView">
+    </item>
+
+
+</menu>
